@@ -12,6 +12,6 @@
 */
 
 
-Route::get('/', function () {
-    return '111111111111111111111';
-});
+Route::get('/index/index', 'Tao\IndexController@index');
+
+

@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return 'tabobao';
+});
 Route::get('/student/index', 'Demo\StudentController@index');
 
 

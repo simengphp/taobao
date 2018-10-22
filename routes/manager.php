@@ -6,6 +6,7 @@
  * Time: 10:15
  */
 Route::group(['middleware'=>'manager'], function () {
+
     Route::any('/common/ajaxEditField', 'Manager\BaseController@ajaxEditField');
 
     Route::any('/manager/login', 'Manager\ManagerController@login');
