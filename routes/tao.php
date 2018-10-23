@@ -14,4 +14,7 @@
 
 Route::get('/', 'Tao\IndexController@index');
 
+Route::get('/tao/goods', 'Tao\ListController@goodsList');
 
+
+Route::get('/tao/detail', 'Tao\ListController@goodsDetail');

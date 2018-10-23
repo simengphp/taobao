@@ -1,91 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <title>测试</title>
-    <meta name="keywords" content="测试">
-    <meta name="description" content="测试">
-    <link href="{{ asset('./tao/pc/static/common.css') }}" rel="stylesheet">
-    <script src="{{ asset('./tao/pc/static/jquery-1.js') }}"></script>
-    <script src="{{ asset('./tao/pc/static/common.js') }}" type="text/javascript"></script>
-</head>
+@include('tao.common.header')
 <body>
-<div class="header" id="header">
-    <div class="header-bar">
-        <i class="close"></i>
-        <div class="wrapper">
-            <p class="coll-desc">按<strong>Ctrl&nbsp;+&nbsp;D</strong>,将517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网放入收藏夹，优惠券信息一手掌握！</p>
-        </div>
-    </div>
-    <div class="header-top">
-        <div class="wrapper">
-            <a href="http://tao.517zhe.com/" class="logo-area">
-                <img class="logo" alt="517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网" src="./static/431146a6721db3903acf99c29d94f9f3.png">
-            </a>
-            <div class="slogan-area">
-                <i class="slogan-icon cate-icon"></i>
-                <p>正品好货</p>
-                <i class="slogan-icon cate-icon"></i>
-                <p>人工精选</p>
-                <i class="slogan-icon cate-icon"></i>
-                <p>内部领券</p>
-                <i class="slogan-icon cate-icon"></i>
-                <p>全场包邮</p>
-            </div>
-            <div class="search-area">
-                <form name="soForm" action="index.php/index/so/index.html" method="get" id="soform">
-
-                    <!-- <select name="type" class="type-input-area">
-                        <option value="0"  class='selected'>本站搜索</option>
-                        <option value="1" >超级搜索</option>
-                    </select> -->
-
-                    <div class="select-area">
-                        <div class="select-area-img"></div>
-                        <div class="selected " data-id="0">本站 </div>
-                        <div class="" data-id="1">全网 </div>
-                    </div>
-                    <input name="type" value="0" id="type" type="hidden">
-                    <div class="input-area">
-                        <i>
-                        </i>
-
-                        <input id="keyword" autocomplete="off" onblur="this.value==''?this.value=this.title:null" onfocus="this.value==this.title?this.value='':null" title="输入关键词或淘宝链接" placeholder="输入关键词" class="search-input" name="wd" type="text">
-
-                    </div>
-                    <a href="javascript:;" class="search-btn">搜索</a>
-                </form>
-            </div>
-            <div id="suggest" class="suggest"></div>
-        </div>
-    </div>
-
-
-    <div class="tab-area-plh">
-        <div class="tab-area">
-            <div class="wrapper">
-                <div class="cate-area">
-                    <a class="cate-item jxtj active" href="http://tao.517zhe.com/">
-                        <span class="cate-rec">精选推荐</span>
-                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/jiu/index.html" class="cate-item ">
-                        9块9包邮                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/ershi/index.html" class="cate-item ">
-                        20元封顶                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/history/index.html" class="cate-item ">
-                        我的足迹                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/live/index.html" class="cate-item ">
-                        优惠直播                    </a>
-
-                </div>
-                <div style="line-height:40px;float:right;color:#FFF; right;margin-top:-40px;margin-right:20px;font-size:15px">
-                    <a style="line-height:40px;color:#FFF;margin-right:10px;" href="http://tao.517zhe.com/index.php/index/user/register.html">注册</a>  <a style="line-height:40px;color:#FFF;" href="http://tao.517zhe.com/index.php/index/user/login.html">登录</a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('tao.common.top')
 <div class="cate-box">
     <div class="tab-area" style="display:none">
         <div class="wrapper hori-cate-area">
@@ -343,47 +258,7 @@
     <div class="page">
         <ul class="pagination"><li class="disabled"><span>«</span></li> <li class="active"><span>1</span></li><li><a href="http://tao.517zhe.com/?page=2">2</a></li><li><a href="http://tao.517zhe.com/?page=3">3</a></li><li><a href="http://tao.517zhe.com/?page=4">4</a></li><li><a href="http://tao.517zhe.com/?page=5">5</a></li><li><a href="http://tao.517zhe.com/?page=6">6</a></li><li><a href="http://tao.517zhe.com/?page=7">7</a></li><li><a href="http://tao.517zhe.com/?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="http://tao.517zhe.com/?page=1004">1004</a></li><li><a href="http://tao.517zhe.com/?page=1005">1005</a></li> <li><a href="http://tao.517zhe.com/?page=2">»</a></li></ul>    </div>
 </div>
-<div class="footer">
-    <div class="footer-top">
-        <div class="wrapper">
-            <div class="yl">
-                <p style="padding-top: 8px;" class="head">友情链接:</p>
-                <div class="yl-links">
-                    <a href="http://baidu.com/" target="_blank">百度</a>
-                    <a href="http://www.517zhe.com/" target="_blank">517折</a>
-
-                </div>
-            </div>
-
-            <div class="logo-slogan">
-                <div class="qr-code">
-                    <a title="517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网" href="http://tao.517zhe.com/">
-                        <img alt="517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网" src="./static/7de274e80b29e07dd4ebbb14eca8611d.png">
-                    </a>
-                </div>
-                <div class="txt">
-                    <div class="logo">517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网</div>
-                    <p class="s1">聪明的人，都会省钱</p>
-                    <p class="s2">购物省钱神器</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="display:none">
-        <form name="filterForm" action="/" method="get">
-            <input name="page" value="1" type="text">
-            <input name="sort" value="default" type="text">
-            <input name="price" value="0" type="text">
-            <input name="wd" type="text">
-            <input type="submit">
-        </form>
-    </div>
-    <div class="footer-bootom">
-        <div class="wrapper">
-            <p>517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网  <a href="http://www.miitbeian.gov.cn/" target="_blank"></a>　　Copyright @2018-2019 517折网 517zhe.com  All Rights Reserved</p>
-        </div>
-    </div>
-</div>
+@include('tao.common.footer')
 <script type="text/javascript">
     ;$(function(){
         var sort = "";
@@ -513,14 +388,7 @@
         })
     });
 </script>
-<div style="margin-left: 590px;" class="side-fixed-menu">
-    <div id="backToTop" class="menu-item" style="display:none">
-        <i class=" cate-icon"></i>
-        <p>返回顶部</p>
-    </div>
-    <a target="_blank" href="http://tao.517zhe.com/index.php/index/history/index.html"><div class="menu-item" id="toHis"><i class=" cate-icon" style="font-size:22px;"></i><p>浏览记录</p></div></a>
-
-</div>
+@include('tao.common.return')
 
 <div style="display:none">
 </div>

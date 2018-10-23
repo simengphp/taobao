@@ -122,16 +122,8 @@
                                 商品描述<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
-                                <textarea class="form-control" id="desc" name="desc" rows="3" placeholder="文章描述">{{ old('desc')??$ret['desc'] }}</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="desc" class="col-sm-2 control-label">
-                                商品内容<i style="color: red">*</i>
-                            </label>
-                            <div class="col-sm-6">
-						<textarea id="editor" name="content" rows="10" cols="80" style="visibility: hidden; display: none;">
-							 {{ old('content')??$ret['content'] }}
+						<textarea id="editor" name="desc" rows="10" cols="80" style="visibility: hidden; display: none;">
+							 {{ old('desc')??$ret['desc'] }}
 						</textarea>
                             </div>
                             <script src="{{asset('./common/bower_components/ckeditor/ckeditor.js')}}"></script>

@@ -12,7 +12,6 @@ class ArticleAuthController extends BaseAuthController
 {
     protected $rules = [
         'title' => 'required',
-        'content' => 'required',
         'desc' => 'required',
         'key' => 'required',
         'class_id' => 'required',
@@ -28,7 +27,6 @@ class ArticleAuthController extends BaseAuthController
 
     protected $customAttributes = [
         'title' => '标题',
-        'content' => '商品内容',
         'desc' => '商品描述',
         'key' => '关键词',
         'class_id' => '商品分类',
