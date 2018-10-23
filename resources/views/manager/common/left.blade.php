@@ -63,7 +63,7 @@
                     <li><a href="/friend/friendList"><i class="fa fa-circle-o"></i>友情链接</a></li>
                 </ul>
             </li>
-            <li class="treeview stack">
+            <li class="treeview pic">
                 <a href="#">
                     <i class="fa fa-camera-retro"></i>
                     <span>网站图片管理</span>
@@ -72,7 +72,7 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="/stack/stack"><i class="fa fa-circle-o"></i>网站图片</a></li>
+                    <li><a href="/pic/picList"><i class="fa fa-circle-o"></i>网站图片</a></li>
                 </ul>
             </li>
         </ul>

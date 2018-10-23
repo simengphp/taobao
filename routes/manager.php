@@ -31,4 +31,9 @@ Route::group(['middleware'=>'manager'], function () {
     Route::any('/friend/friendList', 'Manager\FriendController@friendList');
     Route::any('/friend/curdFriend', 'Manager\FriendController@curdFriend');
     Route::any('/friend/delFriend', 'Manager\FriendController@delFriend');
+
+    /**图片管理*/
+    Route::any('/pic/picList', 'Manager\PicController@picList');
+    Route::any('/pic/curdPic', 'Manager\PicController@curdPic');
+    Route::any('/pic/delPic', 'Manager\PicController@delPic');
 });
