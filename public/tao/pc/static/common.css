@@ -304,10 +304,11 @@ body {
 
 .header .header-top .slogan-area .slogan-icon {
 	float: left;
-	width: 32px;
+	width: 30px;
 	height: 32px;
 	font-size:30px;
 	color:#ff464e;
+	overflow: hidden;
 }
 
 /*.header .header-top .slogan-area .slogan-icon.slogan-icon-1 {*/
