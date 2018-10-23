@@ -75,6 +75,18 @@
                     <li><a href="/pic/picList"><i class="fa fa-circle-o"></i>网站图片</a></li>
                 </ul>
             </li>
+            <li class="treeview pic">
+                <a href="#">
+                    <i class="fa fa-camera-retro"></i>
+                    <span>导航栏管理</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/nav/navList"><i class="fa fa-circle-o"></i>导航栏</a></li>
+                </ul>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

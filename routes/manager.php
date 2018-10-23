@@ -36,4 +36,9 @@ Route::group(['middleware'=>'manager'], function () {
     Route::any('/pic/picList', 'Manager\PicController@picList');
     Route::any('/pic/curdPic', 'Manager\PicController@curdPic');
     Route::any('/pic/delPic', 'Manager\PicController@delPic');
+
+    /**导航栏管理*/
+    Route::any('/nav/navList', 'Manager\NavController@navList');
+    Route::any('/nav/curdNav', 'Manager\NavController@curdNav');
+    Route::any('/nav/delNav', 'Manager\NavController@delNav');
 });

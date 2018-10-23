@@ -6,34 +6,23 @@
         <div class="wrapper hori-cate-area">
             <div class="cate-l-1">
                 <div class="wrapper">
-                    <a href="http://tao.517zhe.com/" class=""><i class="cate-icon"></i>  今日新品</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/1.html" class=""><i class="cate-icon"></i> 女装</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html" class=""><i class="cate-icon"></i> 男装</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/3.html" class=""><i class="cate-icon"></i> 鞋子</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/4.html" class=""><i class="cate-icon"></i> 箱包</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/5.html" class=""><i class="cate-icon"></i> 母婴</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/6.html" class=""><i class="cate-icon"></i> 内衣</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/7.html" class=""><i class="cate-icon"></i> 美妆</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/8.html" class=""><i class="cate-icon"></i> 配饰</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/9.html" class=""><i class="cate-icon"></i> 居家</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/10.html" class=""><i class="cate-icon"></i> 文体</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/11.html" class=""><i class="cate-icon"></i> 数码</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/12.html" class=""><i class="cate-icon"></i> 电器</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/13.html" class=""><i class="cate-icon"></i> 美食</a>
-                    <a href="http://tao.517zhe.com/index.php/index/cate/index/id/14.html" class=""><i class="cate-icon"></i> 其他</a>
+                    <a href="http://tao.517zhe.com/" class=""><i class="cate-icon"></i> 今日新品</a>
+                    @foreach($class_list as $k => $v)
+                    <a href="" class="iconfont {{$v->icon}}"><i class="cate-icon"></i> {{$v->class_name}}</a>
+                    @endforeach
                 </div>
             </div>
         </div>
         <div class="wrapper">
             <div class="order-area">
                 <ul class="sort-type">
-                    <li data-sort="default" style="padding-left: 15px;"><i class="cate-icon" style="font-size:14px"></i> 排序筛选</li>
-                    <li data-sort="default" class="active">默认 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="new" class="">最新 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="volume" class="">销量 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="minPrice" class="">价格 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="quan" class="">券额 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="receive" class="">剩余 <i class="cate-icon" style="font-size:14px"></i></li>
+                    <li data-sort="default" style="padding-left: 15px;"><i class="cate-icon" style="font-size:14px"></i> 排序筛选</li>
+                    <li data-sort="default" class="active">默认 <i class="cate-icon" style="font-size:14px"></i></li>
+                    <li data-sort="new" class="">最新 <i class="cate-icon" style="font-size:14px"></i></li>
+                    <li data-sort="volume" class="">销量 <i class="cate-icon" style="font-size:14px"></i></li>
+                    <li data-sort="minPrice" class="">价格 <i class="cate-icon" style="font-size:14px"></i></li>
+                    <li data-sort="quan" class="">券额 <i class="cate-icon" style="font-size:14px"></i></li>
+                    <li data-sort="receive" class="">剩余 <i class="cate-icon" style="font-size:14px"></i></li>
                 </ul>
                 <ul class="price-filter">
                     <li data-price="10" class=""><span><i></i></span>10元券</li>
@@ -66,7 +55,7 @@
         @foreach($class_list as $k => $v)
         <a class="cate-item" href="#">
             <div class="inner">
-                <i class="iconfont {{$v->icon}}"></i>{{$v->class_name}}
+                <i class="iconfont {{$v->icon}}"></i>  {{$v->class_name}}
             </div>
         </a>
         @endforeach

@@ -11,13 +11,13 @@
                 <img class="logo" alt="517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网" src="./static/431146a6721db3903acf99c29d94f9f3.png">
             </a>
             <div class="slogan-area">
-                <i class="slogan-icon cate-icon"></i>
+                <i class="slogan-icon cate-icon icon-haohuo"></i>
                 <p>正品好货</p>
-                <i class="slogan-icon cate-icon icon-jx"></i>
+                <i class="slogan-icon cate-icon icon-jx"></i>
                 <p>人工精选</p>
-                <i class="slogan-icon cate-icon icon-fe4a49"></i>
+                <i class="slogan-icon cate-icon icon-fe4a49"></i>
                 <p>内部领券</p>
-                <i class="slogan-icon cate-icon icon-baoyou"></i>
+                <i class="slogan-icon cate-icon icon-baoyou"></i>
                 <p>全场包邮</p>
             </div>
             <div class="search-area">
@@ -64,10 +64,6 @@
                         我的足迹                    </a>
                     <a href="http://tao.517zhe.com/index.php/index/live/index.html" class="cate-item ">
                         优惠直播                    </a>
-
-                </div>
-                <div style="line-height:40px;float:right;color:#FFF; right;margin-top:-40px;margin-right:20px;font-size:15px">
-                    <a style="line-height:40px;color:#FFF;margin-right:10px;" href="http://tao.517zhe.com/index.php/index/user/register.html">注册</a>  <a style="line-height:40px;color:#FFF;" href="http://tao.517zhe.com/index.php/index/user/login.html">登录</a>
 
                 </div>
             </div>
