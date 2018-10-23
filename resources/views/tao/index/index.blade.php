@@ -63,62 +63,13 @@
 </script>
 <div class="wrapper home-oper-area">
     <div class="cate-area">
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/1.html">
+        @foreach($class_list as $k => $v)
+        <a class="cate-item" href="#">
             <div class="inner">
-                <i class="cate-icon"></i> 女装            </div>
+                <i class="iconfont {{$v->icon}}"></i>{{$v->class_name}}
+            </div>
         </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 男装            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/3.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 鞋子            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/4.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 箱包            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/5.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 母婴            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/6.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 内衣            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/7.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 美妆            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/8.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 配饰            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/9.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 居家            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/10.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 文体            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/11.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 数码            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/12.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 电器            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/13.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 美食            </div>
-        </a>
-        <a class="cate-item" href="http://tao.517zhe.com/index.php/index/cate/index/id/14.html">
-            <div class="inner">
-                <i class="cate-icon"></i> 其他            </div>
-        </a>
+        @endforeach
     </div>
     <!--广告轮播-->
     <div class="banner-top">

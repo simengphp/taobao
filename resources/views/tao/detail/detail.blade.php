@@ -706,6 +706,15 @@
         </div>
     </div>
 </div>
+<script>
+    //头部搜索框js:
+    $('.select-area div').not( $(".select-area-img") ).click(function(){
+        var a = $(this).attr("data-id");
+        $('#type').val(a);
+        $(this).addClass("selected").siblings().removeClass("selected");
+
+    })
+</script>
 @include('tao.common.footer')
 @include('tao.common.return')
 <div style="display:none">

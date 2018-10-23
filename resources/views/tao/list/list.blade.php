@@ -240,6 +240,15 @@
             return false;
         });
     });
+
+
+    //头部搜索框js:
+    $('.select-area div').not( $(".select-area-img") ).click(function(){
+        var a = $(this).attr("data-id");
+        $('#type').val(a);
+        $(this).addClass("selected").siblings().removeClass("selected");
+
+    })
 </script>
 
 @include('tao.common.return')
