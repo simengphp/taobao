@@ -12,6 +12,6 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        return 111;
+        return view('tao.index.index');
     }
 }
