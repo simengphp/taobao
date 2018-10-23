@@ -13,11 +13,11 @@
             <div class="slogan-area">
                 <i class="slogan-icon cate-icon"></i>
                 <p>正品好货</p>
-                <i class="slogan-icon cate-icon"></i>
+                <i class="slogan-icon cate-icon icon-jx"></i>
                 <p>人工精选</p>
-                <i class="slogan-icon cate-icon"></i>
+                <i class="slogan-icon cate-icon icon-fe4a49"></i>
                 <p>内部领券</p>
-                <i class="slogan-icon cate-icon"></i>
+                <i class="slogan-icon cate-icon icon-baoyou"></i>
                 <p>全场包邮</p>
             </div>
             <div class="search-area">

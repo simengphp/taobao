@@ -87,17 +87,17 @@ a {
 	text-decoration: underline
 }
 
-@font-face {
-	font-family: "iconfont";
-    src: url('../images/cateIconfont/iconfont.eot'); /* IE9*/
-    src: url('../images/cateIconfont/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../images/cateIconfont/iconfont.woff') format('woff'), /* chrome, firefox */
-    url('../images/cateIconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-    url('../images/cateIconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
+/*@font-face {*/
+	/*font-family: "iconfont";*/
+    /*src: url('../images/cateIconfont/iconfont.eot'); !* IE9*!*/
+    /*src: url('../images/cateIconfont/iconfont.eot#iefix') format('embedded-opentype'), !* IE6-IE8 *!*/
+    /*url('../images/cateIconfont/iconfont.woff') format('woff'), !* chrome, firefox *!*/
+    /*url('../images/cateIconfont/iconfont.ttf') format('truetype'), !* chrome, firefox, opera, Safari, Android, iOS 4.2+*!*/
+    /*url('../images/cateIconfont/iconfont.svg#iconfont') format('svg'); !* iOS 4.1- *!*/
+/*}*/
 
 .cate-icon {
-	font-family: "iconfont" !important;
+	font-family: "iconfont";
 	color: #d8d8d8;
 	font-style:normal;
 	-webkit-font-smoothing: antialiased;
@@ -310,21 +310,21 @@ body {
 	color:#ff464e;
 }
 
-.header .header-top .slogan-area .slogan-icon.slogan-icon-1 {
-	background-image: url(../images/slogan-icon-1-a61c191904.png)
-}
+/*.header .header-top .slogan-area .slogan-icon.slogan-icon-1 {*/
+	/*background-image: url(../images/slogan-icon-1-a61c191904.png)*/
+/*}*/
 
-.header .header-top .slogan-area .slogan-icon.slogan-icon-2 {
-	background-image: url(../images/slogan-icon-2-6cacea570c.png)
-}
+/*.header .header-top .slogan-area .slogan-icon.slogan-icon-2 {*/
+	/*background-image: url(../images/slogan-icon-2-6cacea570c.png)*/
+/*}*/
 
-.header .header-top .slogan-area .slogan-icon.slogan-icon-3 {
-	background-image: url(../images/slogan-icon-3-743e48e40e.png)
-}
+/*.header .header-top .slogan-area .slogan-icon.slogan-icon-3 {*/
+	/*background-image: url(../images/slogan-icon-3-743e48e40e.png)*/
+/*}*/
 
-.header .header-top .slogan-area .slogan-icon.slogan-icon-4 {
-	background-image: url(../images/slogan-icon-4-2b2d3a03d0.png)
-}
+/*.header .header-top .slogan-area .slogan-icon.slogan-icon-4 {*/
+	/*background-image: url(../images/slogan-icon-4-2b2d3a03d0.png)*/
+/*}*/
 
 .header .header-top .slogan-area p {
 	float: left;
@@ -2181,21 +2181,21 @@ color:#ff464e
 
 }
 
-.new-search .main .slogan-area .slogan-icon.slogan-icon-1 {
-	background-image: url(../images/slogan-icon-1-a61c191904.png)
-}
+/*.new-search .main .slogan-area .slogan-icon.slogan-icon-1 {*/
+	/*background-image: url(../images/slogan-icon-1-a61c191904.png)*/
+/*}*/
 
-.new-search .main .slogan-area .slogan-icon.slogan-icon-2 {
-	background-image: url(../images/slogan-icon-2-6cacea570c.png)
-}
+/*.new-search .main .slogan-area .slogan-icon.slogan-icon-2 {*/
+	/*background-image: url(../images/slogan-icon-2-6cacea570c.png)*/
+/*}*/
 
-.new-search .main .slogan-area .slogan-icon.slogan-icon-3 {
-	background-image: url(../images/slogan-icon-3-743e48e40e.png)
-}
+/*.new-search .main .slogan-area .slogan-icon.slogan-icon-3 {*/
+	/*background-image: url(../images/slogan-icon-3-743e48e40e.png)*/
+/*}*/
 
-.new-search .main .slogan-area .slogan-icon.slogan-icon-4 {
-	background-image: url(../images/slogan-icon-4-2b2d3a03d0.png)
-}
+/*.new-search .main .slogan-area .slogan-icon.slogan-icon-4 {*/
+	/*background-image: url(../images/slogan-icon-4-2b2d3a03d0.png)*/
+/*}*/
 
 .new-search .main .slogan-area p {
 	float: left;
