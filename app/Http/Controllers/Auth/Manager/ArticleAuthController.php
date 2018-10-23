@@ -28,7 +28,7 @@ class ArticleAuthController extends BaseAuthController
 
     protected $customAttributes = [
         'title' => '标题',
-        'content' => '文章内容',
+        'content' => '商品内容',
         'desc' => '商品描述',
         'key' => '关键词',
         'class_id' => '商品分类',
