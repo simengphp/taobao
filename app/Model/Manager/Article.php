@@ -19,7 +19,7 @@ class Article extends Base
     public $timestamps = true;
     /**白名单字段*/
     protected $fillable = ['pic', 'title', 'content', 'desc', 'author', 'look', 'sort', 'key',
-        'class_id'];
+        'class_id','is_index'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -71,7 +71,8 @@ class Article extends Base
             $article->desc = $data['desc'];
             $article->author = $data['author'];
             $article->look = $data['look'];
-            $article->sort = $data['sort'];
+            $article->sort = $data['sort']??0;
+            $article->is_index = $data['is_index']??0;
             $article->key = $data['key'];
             $article->class_id = $data['class_id'];
             $ret = $article->save();
