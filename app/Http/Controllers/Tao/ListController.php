@@ -9,11 +9,16 @@
 namespace App\Http\Controllers\Tao;
 
 
+use App\Model\Tao\Article;
+use Illuminate\Http\Request;
+
 class ListController extends BaseController
 {
-    public function goodsList()
+    public function goodsList(Request $request)
     {
-        return view('tao.list.list');
+        /**获取商品*/
+        $goods_list = (new Article())->goodsList(16,$request->all());
+        return view('tao.list.list', ['goods_list'=>$goods_list]);
     }
 
     public function goodsDetail()

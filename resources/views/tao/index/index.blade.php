@@ -6,32 +6,14 @@
         <div class="wrapper hori-cate-area">
             <div class="cate-l-1">
                 <div class="wrapper">
-                    <a href="http://tao.517zhe.com/" class=""><i class="cate-icon"></i> 今日新品</a>
+                    <a href="#" class=""><i class="cate-icon"></i> 今日新品</a>
                     @foreach($class_list as $k => $v)
-                    <a href="" class="iconfont {{$v->icon}}"><i class="cate-icon"></i> {{$v->class_name}}</a>
+                    <a href="/tao/goods?class_id={{$v->id}}" class="iconfont {{$v->icon}}"><i class="cate-icon"></i> {{$v->class_name}}</a>
                     @endforeach
                 </div>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="order-area">
-                <ul class="sort-type">
-                    <li data-sort="default" style="padding-left: 15px;"><i class="cate-icon" style="font-size:14px"></i> 排序筛选</li>
-                    <li data-sort="default" class="active">默认 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="new" class="">最新 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="volume" class="">销量 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="minPrice" class="">价格 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="quan" class="">券额 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="receive" class="">剩余 <i class="cate-icon" style="font-size:14px"></i></li>
-                </ul>
-                <ul class="price-filter">
-                    <li data-price="10" class=""><span><i></i></span>10元券</li>
-                    <li data-price="20" class=""><span><i></i></span>20元券</li>
-                    <li data-price="50" class=""><span><i></i></span>50元券</li>
-                    <li data-price="100" class=""><span><i></i></span>100元券</li>
-                </ul>
-            </div>
-        </div>
+        @include('tao.common.sort')
     </div>
 </div>
 <script type="text/javascript">
@@ -53,7 +35,7 @@
 <div class="wrapper home-oper-area">
     <div class="cate-area">
         @foreach($class_list as $k => $v)
-        <a class="cate-item" href="#">
+        <a class="cate-item" href="/tao/goods?class_id={{$v->id}}">
             <div class="inner">
                 <i class="iconfont {{$v->icon}}"></i>  {{$v->class_name}}
             </div>

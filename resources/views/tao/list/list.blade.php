@@ -6,34 +6,16 @@
         <div class="wrapper hori-cate-area">
             <div class="cate-l-1">
                 <div class="wrapper">
-                    <a href="http://tao.517zhe.com/" class=""><i class="cate-icon"></i> 全部分类</a>
+                    <a href="/tao/goods" class=""><i class="cate-icon"></i> 全部分类</a>
                     @foreach($class_list as $k => $v)
-                    <a class="" href="http://tao.517zhe.com/index.php/index/cate/index/id/1.html">
+                    <a class="" href="/tao/goods?class_id={{$v->id}}">
                        <i class="iconfont {{$v->icon}}"></i> {{$v->class_name}}
                     </a>
                     @endforeach
                 </div>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="order-area">
-                <ul class="sort-type">
-                    <li data-sort="default" style="padding-left: 15px;"><i class="cate-icon" style="font-size:14px"></i> 排序筛选</li>
-                    <li data-sort="default" class="active">默认 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="new" class="">最新 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="volume" class="">销量 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="minPrice" class="">价格 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="quan" class="">券额 <i class="cate-icon" style="font-size:14px"></i></li>
-                    <li data-sort="receive" class="">剩余 <i class="cate-icon" style="font-size:14px"></i></li>
-                </ul>
-                <ul class="price-filter">
-                    <li data-price="10" class=""><span><i></i></span>10元券</li>
-                    <li data-price="20" class=""><span><i></i></span>20元券</li>
-                    <li data-price="50" class=""><span><i></i></span>50元券</li>
-                    <li data-price="100" class=""><span><i></i></span>100元券</li>
-                </ul>
-            </div>
-        </div>
+        @include('tao.common.sort')
     </div>
 </div>
 <script type="text/javascript">
@@ -51,60 +33,71 @@
 </script>
 <div class="wrapper home-wrapper">
     <div id="couponList" class="zk-list clearfix">
-        <div class="zk-item">
-            <div class="img-area">
+        @if (count($goods_list) == 0)
+            <div align="center">
+                <img src="/uploads/empty.png" alt="暂无数据">
+            </div>
+        @else
+        @foreach($goods_list as $k => $v)
+            <div class="zk-item">
+                <div class="img-area">
+                    <span class="goods-new">新品</span>
+                    <div class="lq">
+                        <a href="http://tao.517zhe.com/index.php/index/click/index/id/566343208075/coupon_id/65675c8b51484b20b366d9c82919c459.html" target="_blank" rel="nofollow">
+                            <div class="lq-t">
+                                <p class="lq-t-d1">领优惠券</p>
+                                <p class="lq-t-d2">省<span>{{$v->ticket}}</span>元</p>
+                            </div>
+                            <div class="lq-b"></div>
+                        </a>
+                    </div>
 
-                <span class="goods-new">新品</span>                    <div class="lq">
-                    <a href="http://tao.517zhe.com/index.php/index/click/index/id/577190165935/coupon_id/b7e61da8506d4032b62c5ef85d847eb3.html" target="_blank" rel="nofollow">
-                        <div class="lq-t">
-                            <p class="lq-t-d1">领优惠券</p>
-                            <p class="lq-t-d2">省<span>100</span>元</p>
-                        </div>
-                        <div class="lq-b"></div>
+                    <div class="bottom-info">
+                        <p class="time-count" data-endtime="{{$v->end_time}}"><i class="cate-icon"></i></p>
+                    </div>
+                    <a href="" target="_blank" title="{{$v->title}}">
+                        <img alt="{{$v->title}}"
+                             class="lazy" src="/uploads/{{$v->pic}}" style="opacity: 1;">
                     </a>
                 </div>
-
-                <div class="bottom-info">
-                    <p class="time-count" data-endtime="1540223999"><i class="cate-icon"></i></p>
-                </div>
-                <a href="http://tao.517zhe.com/index.php/index/goods/index/id/577190165935.html" target="_blank" title="【今日下单89元】新款男士外套韩版个性新潮上衣帅气夹克男装休闲">
-                    <img alt="【今日下单89元】新款男士外套韩版个性新潮上衣帅气夹克男装休闲" data-original="https://gd2.alicdn.com/imgextra/i2/2498859834/O1CN012MW1NTdwiaxOgku_!!2498859834.jpg_310x310.jpg" class="lazy" src="%E3%80%90%E7%94%B7%E8%A3%851%E6%8A%98%E8%B5%B7%E3%80%91%E6%96%B0%E6%AC%BE%E6%97%B6%E5%B0%9A%E7%94%B7%E8%A3%85,%E6%BD%AE%E6%B5%81%E5%93%81%E7%89%8C%E7%94%B7%E8%A3%85,%E5%85%A8%E5%9C%BA1%E6%8A%98%E8%B5%B7%E9%99%90%E9%87%8F%E7%A7%92%E6%9D%80-517%E6%8A%98%E7%BD%91-%E6%B7%98%E5%AE%9D%E5%A4%A9%E7%8C%AB%E6%AF%94%E4%BB%B7%E4%BC%98%E6%83%A0%E5%88%B8%E7%99%BD%E8%8F%9C%E7%A7%92%E6%9D%80%E7%89%B9%E4%BB%B7%E7%BA%A2%E5%8C%85%E8%BF%94%E5%88%A9%E7%BD%91_files/O1CN012MW1NTdwiaxOgku_2498859834.jpg" style="opacity: 1;">
-                </a>
-            </div>
-            <p class="title-area elli">
-
+                <p class="title-area elli">
                 <span class="post-free">
-                    包邮
+                    {{$v->postcode?'包邮':'不包邮'}}
                 </span>
-
-                【今日下单89元】新款男士外套韩版个性新潮上衣帅气夹克男装休闲            </p>
-            <div class="raw-price-area">现价：¥189<p class="sold">已领 1632 张券</p></div>
-            <div class="info">
-                <div class="price-area">
+                    {{$v->title}}
+                </p>
+                <div class="raw-price-area">原价：¥{{$v->old_price}}<p class="sold">已领 {{$v->ticket_num}} 张券</p></div>
+                <div class="info">
+                    <div class="price-area">
                     <span class="price">
-                        ¥
-                        <em class="number-font" style="font-size: 26px;">
-                            89                        </em>
-                        <i>
-                        </i>
+                        现价：¥
+                        <em class="number-font" style="font-size: 18px;">
+                            {{$v->new_price}}
+                        </em>
+                        <i></i>
                     </span>
-                </div>
-                <div class="buy-area">
-                    <a href="http://tao.517zhe.com/index.php/index/click/index/id/577190165935/coupon_id/b7e61da8506d4032b62c5ef85d847eb3.html" target="_blank" rel="nofollow">
-                                            <span class="coupon-amount">
-                                                            去淘宝
-                                                    </span>
-                        <span class="btn-title">火速领券</span>
-                    </a>
-                </div>
-                <div class="platform-area">
-                    <img src="%E3%80%90%E7%94%B7%E8%A3%851%E6%8A%98%E8%B5%B7%E3%80%91%E6%96%B0%E6%AC%BE%E6%97%B6%E5%B0%9A%E7%94%B7%E8%A3%85,%E6%BD%AE%E6%B5%81%E5%93%81%E7%89%8C%E7%94%B7%E8%A3%85,%E5%85%A8%E5%9C%BA1%E6%8A%98%E8%B5%B7%E9%99%90%E9%87%8F%E7%A7%92%E6%9D%80-517%E6%8A%98%E7%BD%91-%E6%B7%98%E5%AE%9D%E5%A4%A9%E7%8C%AB%E6%AF%94%E4%BB%B7%E4%BC%98%E6%83%A0%E5%88%B8%E7%99%BD%E8%8F%9C%E7%A7%92%E6%9D%80%E7%89%B9%E4%BB%B7%E7%BA%A2%E5%8C%85%E8%BF%94%E5%88%A9%E7%BD%91_files/platform_taobao.png">淘宝
+                    </div>
+                    <div class="buy-area">
+                        <a href="" target="_blank" rel="nofollow">
+                        <span class="coupon-amount">
+                                        去淘宝
+                        </span>
+                            <span class="btn-title">火速领券</span>
+                        </a>
+                    </div>
+                    <div class="platform-area">
+                        <img src="{{ asset('./tao/pc/static/platform_taobao.png') }}">淘宝
+                    </div>
                 </div>
             </div>
-        </div>
+        @endforeach
+        @endif
     </div>
     <div class="page">
-        <ul class="pagination"><li class="disabled"><span>«</span></li> <li class="active"><span>1</span></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=2">2</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=3">3</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=4">4</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=5">5</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=6">6</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=7">7</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=91">91</a></li><li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=92">92</a></li> <li><a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html?id=2&amp;page=2">»</a></li></ul>    </div>
+        <ul class="pagination">
+            {{$goods_list->links()}}
+        </ul>
+    </div>
 </div>
 @include('tao.common.footer')
 <script type="text/javascript">
