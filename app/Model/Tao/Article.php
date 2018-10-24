@@ -47,7 +47,6 @@ class Article extends Base
         ]);
         return $list;
     }
-
     public function getOneDetail($id)
     {
         return Article::find($id);

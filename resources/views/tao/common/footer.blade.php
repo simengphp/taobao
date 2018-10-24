@@ -4,9 +4,9 @@
             <div class="yl">
                 <p style="padding-top: 8px;" class="head">友情链接:</p>
                 <div class="yl-links">
-                    <a href="http://baidu.com/" target="_blank">百度</a>
-                    <a href="http://www.517zhe.com/" target="_blank">517折</a>
-
+                    @foreach($friend_link as $k => $v)
+                    <a href="{{$v->value}}" target="_blank">{{$v->name}}</a>
+                    @endforeach
                 </div>
             </div>
 
