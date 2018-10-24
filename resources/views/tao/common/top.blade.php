@@ -53,18 +53,14 @@
         <div class="tab-area">
             <div class="wrapper">
                 <div class="cate-area">
-                    <a class="cate-item jxtj active" href="http://tao.517zhe.com/">
-                        <span class="cate-rec">精选推荐</span>
-                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/jiu/index.html" class="cate-item ">
-                        9块9包邮                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/ershi/index.html" class="cate-item ">
-                        20元封顶                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/history/index.html" class="cate-item ">
-                        我的足迹                    </a>
-                    <a href="http://tao.517zhe.com/index.php/index/live/index.html" class="cate-item ">
-                        优惠直播                    </a>
-
+                    {{--<a class="cate-item jxtj active" href="http://tao.517zhe.com/">--}}
+                        {{--<span class="cate-rec">精选推荐</span>--}}
+                    {{--</a>--}}
+                    @foreach($nav_list as $k=>$v)
+                        <a class="cate-item {{$k==0?'jxtj active':''}}" href="{{$v->url}}">
+                            <span class="cate-rec">{{$v->name}}</span>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>

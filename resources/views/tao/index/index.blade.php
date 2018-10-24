@@ -63,81 +63,38 @@
     <!--广告轮播-->
     <div class="banner-top">
         <div class="banner-area swiper-container swiper-container-horizontal">
-            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1320px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 660px;"><a target="_blank" class="swiper-slide swiper-slide-duplicate" href="http://tao.517zhe.com/index.php/index/index/index.html" data-swiper-slide-index="4" style="width: 660px;">
-                        <img style="width: 100%;" src="./static/2e2f035fdb44fd7aef2b3ab67a8c32da.jpg">
-                    </a></div>
-                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 660px;"><a target="_blank" class="swiper-slide swiper-slide-duplicate" href="http://tao.517zhe.com/index.php/index/index/index.html" data-swiper-slide-index="1" style="width: 660px;">
-                        <img style="width: 100%;" src="./static/f5db60e410ad97487a71f10d861c4ce4.png">
-                    </a></div>
-                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 660px;"><a target="_blank" class="swiper-slide swiper-slide-duplicate" href="http://tao.517zhe.com/index.php/index/index/index.html" data-swiper-slide-index="2" style="width: 660px;">
-                        <img style="width: 100%;" src="./static/ece0a32d59275b31a3ac7cf7a8a35855.jpg">
-                    </a></div>
-                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 660px;"><a target="_blank" class="swiper-slide swiper-slide-duplicate" href="http://tao.517zhe.com/index.php/index/index/index.html" data-swiper-slide-index="3" style="width: 660px;">
-                        <img style="width: 100%;" src="./static/bb2233e4c493ba257ae21ee13e98540b.jpg">
-                    </a></div>
-                <div class="swiper-slide" data-swiper-slide-index="3" style="width: 660px;"><a target="_blank" class="swiper-slide swiper-slide-duplicate" href="http://tao.517zhe.com/index.php/index/index/index.html" data-swiper-slide-index="4" style="width: 660px;">
-                        <img style="width: 100%;" src="./static/2e2f035fdb44fd7aef2b3ab67a8c32da.jpg">
-                    </a></div>
-
-                <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 660px;"><a target="_blank" class="swiper-slide swiper-slide-duplicate" href="http://tao.517zhe.com/index.php/index/index/index.html" data-swiper-slide-index="1" style="width: 660px;">
-                        <img style="width: 100%;" src="./static/f5db60e410ad97487a71f10d861c4ce4.png">
-                    </a></div></div>
-
-            <div class="swiper-bottom">
-                <div class="swiper-pager"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1320px, 0px, 0px);">
+                @foreach($pic_list as $k=>$v)
+                    <div class="swiper-slide swiper-slide-prev" style="width: 660px;">
+                        <a target="_blank" class="swiper-slide swiper-slide-duplicate" href="" style="width: 660px;">
+                            <img style="width: 100%;" src="./uploads/{{$v->pic}}">
+                        </a>
+                    </div>
+                @endforeach
             </div>
-
+            <div class="swiper-bottom">
+                <div class="swiper-pager">
+                </div>
+            </div>
         </div>
 
         <div class="top-right-banner">
             <a href="http://tao.517zhe.com/index.php/index/index/index.html" target="_blank" title="轮播右侧">
-                <img src="./static/7735baf4429b335f5626f2698e0f51cf.jpg" title="轮播右侧广告">
+                <img src="./uploads/{{$pic_right->pic}}" title="轮播右侧广告">
             </a>
-
-
         </div>
 
     </div>
 
-
     <div class="small-banner-area">
+        @foreach($pic_bottom_list as $k=>$v)
         <div href="javascript:;" class="small-banner-item">
             <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
-                <img src="./static/a8283a0300dd1c29e699a56cc9c71b00.jpg">
-                <p class="title">新款短袖</p>
+                <img src="./uploads/{{$v->pic}}">
+                <p class="title">{{$v->alt}}</p>
             </a>
         </div>
-        <div href="javascript:;" class="small-banner-item">
-            <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
-                <img src="./static/78de719addf37e44acd6b8651cc9c434.jpg">
-                <p class="title">唇妆</p>
-            </a>
-        </div>
-        <div href="javascript:;" class="small-banner-item">
-            <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
-                <img src="./static/bd3f3c9bbd13b0227c8d97d82a714aae.jpg">
-                <p class="title">薄款外套</p>
-            </a>
-        </div>
-        <div href="javascript:;" class="small-banner-item">
-            <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
-                <img src="./static/2d09d5722be9dc0f42f613ba82b56263.jpg">
-                <p class="title">单肩包</p>
-            </a>
-        </div>
-        <div href="javascript:;" class="small-banner-item">
-            <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
-                <img src="./static/d11dd600269309f1578ac6e7ecc41627.jpg">
-                <p class="title">男士T恤</p>
-            </a>
-        </div>
-        <div href="javascript:;" class="small-banner-item">
-            <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
-                <img src="./static/5fc14b1bb6e1a63011a658c8bafefd3d.jpg">
-                <p class="title">气质美裙</p>
-            </a>
-        </div>
-
+        @endforeach
     </div>
 </div>
 <div class="wrapper home-wrapper">

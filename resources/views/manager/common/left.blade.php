@@ -77,7 +77,7 @@
             </li>
             <li class="treeview pic">
                 <a href="#">
-                    <i class="fa fa-camera-retro"></i>
+                    <i class="fa fa-bars"></i>
                     <span>导航栏管理</span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

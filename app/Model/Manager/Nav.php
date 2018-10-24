@@ -66,7 +66,7 @@ class Nav extends Base
             $class = Nav::find($data['id']);
             $class->name = $data['name'];
             $class->sort = $data['sort']??0;
-            $class->url = $data['url'];
+            $class->url = $data['url']??'';
             $ret = $class->save();
         } else {
             $ret = Nav::create($data);

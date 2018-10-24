@@ -59,6 +59,8 @@ class PicController extends BaseController
                 'class_name'=>'banner'
             ],['id'=>2,
                 'class_name'=>'首页右方'
+            ],['id'=>3,
+                'class_name'=>'滚动图下方'
             ]];
             return view('manager.pic.curdPic', ['top_name'=>'图片表单','version'=>'1.0','class_obj'=>new ClassName(),'ret'=>$ret]);
         }
