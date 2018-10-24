@@ -18,8 +18,8 @@ class Article extends Base
     protected $model = null;
     public $timestamps = true;
     /**白名单字段*/
-    protected $fillable = ['pic', 'title', 'content', 'desc', 'author', 'look', 'sort', 'key',
-        'class_id','is_index'];
+    protected $fillable = ['pic', 'title', 'desc', 'look', 'sort', 'key','old_price','new_price','ticket',
+        'class_id','is_index','ticket_num','postcode'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -67,14 +67,17 @@ class Article extends Base
             $article = Article::find($data['id']);
             $article->title = $data['title'];
             $article->pic = $data['pic'];
-            $article->content = $data['content'];
             $article->desc = $data['desc'];
-            $article->author = $data['author'];
             $article->look = $data['look'];
             $article->sort = $data['sort']??0;
             $article->is_index = $data['is_index']??0;
             $article->key = $data['key'];
             $article->class_id = $data['class_id'];
+            $article->old_price = $data['old_price'];
+            $article->new_price = $data['new_price'];
+            $article->ticket = $data['ticket'];
+            $article->ticket_num = $data['ticket_num']??0;
+            $article->postcode = $data['postcode']??0;
             $ret = $article->save();
         } else {
             $ret = Article::create($data);

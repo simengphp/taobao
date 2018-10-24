@@ -56,6 +56,24 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="author" class="col-sm-2 control-label">
+                                已领券数量
+                            </label>
+                            <div class="col-sm-6">
+                                <input class="form-control" name="ticket_num"
+                                       value="{{ old('ticket_num')??$ret['ticket_num'] }}" id="ticket" placeholder="已领券数量" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="author" class="col-sm-2 control-label">
+                                1包邮0不包邮
+                            </label>
+                            <div class="col-sm-6">
+                                <input class="form-control" name="postcode"
+                                       value="{{ old('postcode')??$ret['postcode'] }}" id="ticket" placeholder="1包邮0不包邮" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="sort" class="col-sm-2 control-label">
                                 商品排序（正序0/1/2/3）<i style="color: red">*</i>
                             </label>
