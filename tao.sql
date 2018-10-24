@@ -11,7 +11,7 @@
  Target Server Version : 50714
  File Encoding         : 65001
 
- Date: 23/10/2018 17:40:20
+ Date: 24/10/2018 17:37:49
 */
 
 SET NAMES utf8mb4;
@@ -38,7 +38,7 @@ CREATE TABLE `zan_admin`  (
 -- Records of zan_admin
 -- ----------------------------
 INSERT INTO `zan_admin` VALUES (10, '超级管理员', 'admin', 'c6d8e5b18624f32bc940706294e0eb8d', 1539136051, '20181008\\28c4e013e359e49dc1935da77d8a0a40.png', 0, 1537954423, 1537954423);
-INSERT INTO `zan_admin` VALUES (42, '管理员1', 'admin1', '1', 1540285796, '', 0, 0, 0);
+INSERT INTO `zan_admin` VALUES (42, '管理员1', 'admin1', '1', 1540360323, '', 0, 0, 0);
 INSERT INTO `zan_admin` VALUES (41, '管理员', '1', '48e81464369d200a1cddca8082a6d077', 1539046622, '', 9, 1538128075, 1538128078);
 
 -- ----------------------------
@@ -49,35 +49,51 @@ CREATE TABLE `zan_article`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `old_price` decimal(10, 2) NOT NULL DEFAULT 0.00 COMMENT '旧价格',
   `new_price` decimal(10, 2) NOT NULL DEFAULT 0.00 COMMENT '新价格',
-  `ticket` decimal(10, 2) NOT NULL DEFAULT 0.00 COMMENT '优惠券',
+  `ticket` decimal(10, 0) NOT NULL DEFAULT 0 COMMENT '优惠券',
+  `ticket_num` int(11) NOT NULL DEFAULT 0,
+  `look` int(11) NOT NULL,
   `pic` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文章封面图',
+  `postcode` tinyint(1) NOT NULL DEFAULT 0,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文章标题',
-  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文章内容',
   `desc` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '文章描述',
-  `author` char(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '网站作者',
-  `look` int(255) NOT NULL DEFAULT 0 COMMENT '文章浏览量',
   `sort` tinyint(4) NOT NULL,
   `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '网站关键词',
   `class_id` int(11) NOT NULL COMMENT '网站分类的id',
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `is_index` tinyint(1) NOT NULL DEFAULT 0 COMMENT '是否显示在首页 1显示 0不显示',
+  `end_time` int(10) NOT NULL DEFAULT 0,
   `created_at` int(10) NOT NULL DEFAULT 0,
   `updated_at` int(10) NOT NULL DEFAULT 0,
   `deleted_at` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '网站的资讯信息' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 24 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '网站的资讯信息' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of zan_article
 -- ----------------------------
-INSERT INTO `zan_article` VALUES (1, 0.00, 0.00, 0.00, '20181011/2018-10-11-08-20-595bbf07eb5904f.png', 'test111', '<p>1</p>', '1', 'admin', 0, 1, '1', 32, 0, 0, 0, 1539308782, '1539308782');
-INSERT INTO `zan_article` VALUES (2, 0.00, 0.00, 0.00, '', '等等1', '<p>11</p>', '1', '1', 1, 1, '1', 32, 0, 0, 0, 0, NULL);
-INSERT INTO `zan_article` VALUES (3, 0.00, 0.00, 0.00, '20181011/2018-10-11-08-14-025bbf064a955ca.jpg', '1133', '<p>1111</p>', '1', '1', 1, 1, '1', 31, 0, 0, 0, 0, NULL);
-INSERT INTO `zan_article` VALUES (4, 0.00, 0.00, 0.00, '20181011/2018-10-11-08-22-325bbf08489d376.png', 'dafdsa', '<p>12d</p>', '1', 'admin', 0, 1, '1', 32, 0, 0, 0, 0, NULL);
-INSERT INTO `zan_article` VALUES (5, 0.00, 0.00, 0.00, '', '等等111', '<p>111</p>', '1', 'admin', 0, 1, '1', 31, 0, 0, 0, 0, NULL);
-INSERT INTO `zan_article` VALUES (6, 0.00, 0.00, 0.00, '', '天津赞普股份有限公司', '<p>11大是大非</p>', '阿斯蒂芬', 'admin', 0, 1, '1', 31, 0, 0, 0, 0, NULL);
-INSERT INTO `zan_article` VALUES (7, 0.00, 0.00, 0.00, '', '第三方', '<p>的高发地方</p>', '1', 'admin', 0, 1, '1', 31, 0, 0, 0, 0, NULL);
-INSERT INTO `zan_article` VALUES (8, 0.00, 0.00, 0.00, '20181011/2018-10-11-08-43-395bbf0d3b3d9f4.png', '121等等', '<p>1212</p>', '12', 'admin', 0, 1, '1', 31, 0, 0, 1539247419, 1539308760, '1539308760');
+INSERT INTO `zan_article` VALUES (1, 1211.00, 12111.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 1, 0, 1, 1543597200, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (2, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (3, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (4, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (5, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (6, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (7, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (8, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (9, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (10, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (11, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (12, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (13, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (14, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (15, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (16, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (17, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (18, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (19, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (20, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (21, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (22, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
+INSERT INTO `zan_article` VALUES (23, 1211.00, 121.00, 12, 12, 12, '20181024/2018-10-24-02-54-475bcfdef7c5c93.jpg', 1, '测试', '<p>侧嗯嗯</p>', 1, '测试|猜猜猜', 14, 0, 1, 0, 1540349687, 1540349804, NULL);
 
 -- ----------------------------
 -- Table structure for zan_class
@@ -220,6 +236,29 @@ CREATE TABLE `zan_message`  (
 INSERT INTO `zan_message` VALUES (1, '等等', '18522713541', '476319748@qq.com', '的', '的', 0, 0, 1538205584);
 
 -- ----------------------------
+-- Table structure for zan_nav
+-- ----------------------------
+DROP TABLE IF EXISTS `zan_nav`;
+CREATE TABLE `zan_nav`  (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '导航名称',
+  `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `sort` int(11) NULL DEFAULT NULL,
+  `created_at` int(11) NULL DEFAULT 0,
+  `updated_at` int(11) NULL DEFAULT 0,
+  `deleted_at` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '导航' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of zan_nav
+-- ----------------------------
+INSERT INTO `zan_nav` VALUES (1, '9块9包邮', '11', 3, 1540298860, 1540346059, NULL);
+INSERT INTO `zan_nav` VALUES (2, '20元封顶', NULL, 1, 1540345157, 1540345157, NULL);
+INSERT INTO `zan_nav` VALUES (3, '我的足迹', NULL, 2, 1540345187, 1540345187, NULL);
+INSERT INTO `zan_nav` VALUES (4, '精彩推荐', NULL, 0, 1540346051, 1540346051, NULL);
+
+-- ----------------------------
 -- Table structure for zan_pic
 -- ----------------------------
 DROP TABLE IF EXISTS `zan_pic`;
@@ -235,13 +274,22 @@ CREATE TABLE `zan_pic`  (
   `updated_at` int(10) NOT NULL DEFAULT 0,
   `deleted_at` int(10) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '网站的图片' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '网站的图片' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of zan_pic
 -- ----------------------------
 INSERT INTO `zan_pic` VALUES (1, 'alt1', '20180928\\2603b9862b221e883ce1f0b064e407a4.png', 1, 2, '', 0, 1538271092, 1540261872, 1540261872);
-INSERT INTO `zan_pic` VALUES (2, 'alt11', '20181023/2018-10-23-02-42-365bce8a9c89417.jpg', 12, 2, 'c', 0, 1538273182, 1540262562, NULL);
+INSERT INTO `zan_pic` VALUES (2, 'alt11', '20181024/2018-10-24-01-59-165bcfd1f4011d3.jpg', 12, 2, 'c', 0, 1538273182, 1540346356, NULL);
+INSERT INTO `zan_pic` VALUES (3, '1', '20181024/2018-10-24-01-59-535bcfd219bc68b.jpg', NULL, 1, '1', 0, 1540346394, 1540346394, NULL);
+INSERT INTO `zan_pic` VALUES (4, '1', '20181024/2018-10-24-02-00-225bcfd23659aff.jpg', NULL, 1, '1', 0, 1540346422, 1540346422, NULL);
+INSERT INTO `zan_pic` VALUES (5, '1', '20181024/2018-10-24-02-00-335bcfd2418b677.jpg', NULL, 1, '2', 0, 1540346433, 1540346433, NULL);
+INSERT INTO `zan_pic` VALUES (6, '12', '20181024/2018-10-24-02-02-545bcfd2ced5e32.jpg', NULL, 3, '1', 0, 1540346574, 1540346574, NULL);
+INSERT INTO `zan_pic` VALUES (7, '12', '20181024/2018-10-24-02-03-055bcfd2d9edb94.jpg', NULL, 3, '12', 0, 1540346585, 1540346585, NULL);
+INSERT INTO `zan_pic` VALUES (8, '12', '20181024/2018-10-24-02-03-185bcfd2e694c9f.jpg', NULL, 3, '萨芬的', 0, 1540346598, 1540346598, NULL);
+INSERT INTO `zan_pic` VALUES (9, 'ces', '20181024/2018-10-24-02-34-535bcfda4d29362.jpg', NULL, 3, '12', 0, 1540348493, 1540348493, NULL);
+INSERT INTO `zan_pic` VALUES (10, 'sadfads', '20181024/2018-10-24-02-35-055bcfda5951e8a.jpg', NULL, 3, '1', 0, 1540348505, 1540348505, NULL);
+INSERT INTO `zan_pic` VALUES (11, 'sdafadf', '20181024/2018-10-24-02-35-275bcfda6f634e8.jpg', NULL, 3, '1212', 0, 1540348527, 1540348527, NULL);
 
 -- ----------------------------
 -- Table structure for zan_simple
