@@ -17,4 +17,10 @@ class ClassName extends Base
         $list = ClassName::all();
         return $list;
     }
+
+    public function getOneDetail($id)
+    {
+        return ClassName::find($id);
+    }
+
 }

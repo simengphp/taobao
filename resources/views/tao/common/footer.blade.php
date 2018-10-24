@@ -24,15 +24,6 @@
             </div>
         </div>
     </div>
-    <div style="display:none">
-        <form name="filterForm" action="/" method="get">
-            <input name="page" value="1" type="text">
-            <input name="sort" value="default" type="text">
-            <input name="price" value="0" type="text">
-            <input name="wd" type="text">
-            <input type="submit">
-        </form>
-    </div>
     <div class="footer-bootom">
         <div class="wrapper">
             <p>517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网  <a href="http://www.miitbeian.gov.cn/" target="_blank"></a>　　Copyright @2018-2019 517折网 517zhe.com  All Rights Reserved</p>
