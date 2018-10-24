@@ -4,7 +4,7 @@
 <div class="wrapper zk-detail">
     <div class="wrapper-l zk-main">
         <p class="bread-area" _hover-ignore="1">
-            您的位置：<a href="http://tao.517zhe.com/">517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网</a> &nbsp;&gt;&nbsp;
+            您的位置：<a href="/">淘券网-淘宝天猫比价优惠券白菜秒杀特价红包返利网</a> &nbsp;&gt;&nbsp;
             <a href="http://tao.517zhe.com/index.php/index/cate/index/id/2.html">{{$goods_detail->class_name}}</a>
             &nbsp;&gt;&nbsp;{{$goods_detail->title}}        </p>
         <div class="zk-content">

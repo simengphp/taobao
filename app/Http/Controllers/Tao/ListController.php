@@ -38,6 +38,11 @@ class ListController extends BaseController
         /**获取商品相关*/
         $data['class_id'] = $goods_detail['class_id'];
         $goods_list = $this->model->goodsList(16, $data);
-        return view('tao.detail.detail', ['goods_list'=>$goods_list,'goods_detail'=>$goods_detail]);
+
+        $website_title = $goods_detail['title'];
+        $website_key = $goods_detail['website_key'];
+        $website_desc = $goods_detail['website_desc'];
+        return view('tao.detail.detail', ['goods_list'=>$goods_list,'goods_detail'=>$goods_detail,'website_title'=>$website_title,
+            'website_desc'=>$website_desc,'website_key'=>$website_key]);
     }
 }

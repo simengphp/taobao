@@ -24,6 +24,16 @@ class TaoServiceProvider extends AppServiceProvider
         $nav_list = (new Nav())->navList();
         /**获取友情链接*/
         $friend_link = (new Friend())->friendList();
+
+
+        $website_title = "淘券网,一个帮你省钱的购物网站";
+        $website_key = "返利,优惠券,淘宝优惠券,消费返利网,京东优惠券";
+        $website_desc = "淘券网,一个帮你省钱的购物网站,提供天猫，淘宝等购物网站的优惠券，让你花更少的钱买更多的东西";
+
+
+        View::share("website_title", $website_key);
+        View::share("website_key", $website_title);
+        View::share("website_desc", $website_desc);
         View::share("friend_link", $friend_link);
         View::share("class_list", $class_list);
         View::share("nav_list", $nav_list);

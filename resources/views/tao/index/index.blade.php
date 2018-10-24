@@ -86,7 +86,7 @@
             <div class="img-area">
                 <span class="goods-new">新品</span>
                 <div class="lq">
-                    <a href="http://tao.517zhe.com/index.php/index/click/index/id/566343208075/coupon_id/65675c8b51484b20b366d9c82919c459.html" target="_blank" rel="nofollow">
+                    <a href="#" target="_blank" rel="nofollow">
                         <div class="lq-t">
                             <p class="lq-t-d1">领优惠券</p>
                             <p class="lq-t-d2">省<span>{{$v->ticket}}</span>元</p>
@@ -98,7 +98,7 @@
                 <div class="bottom-info">
                     <p class="time-count" data-endtime="{{$v->end_time}}"><i class="cate-icon"></i></p>
                 </div>
-                <a href="" target="_blank" title="{{$v->title}}">
+                <a href="/tao/detail?g_id={{$v->id}}" target="_blank" title="{{$v->title}}">
                     <img alt="{{$v->title}}"
                           class="lazy" src="/uploads/{{$v->pic}}" style="opacity: 1;">
                 </a>

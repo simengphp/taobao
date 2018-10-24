@@ -102,11 +102,20 @@
                         </div>
                         <div class="form-group">
                             <label for="key" class="col-sm-2 control-label">
-                                商品关键词（SEO）<i style="color: red">*</i>
+                                商品关键词<i style="color: red">*</i>
                             </label>
                             <div class="col-sm-6">
                                 <input class="form-control" name="key"
                                        value="{{ old('key')??$ret['key'] }}" id="key" placeholder="文章关键词(用于SEO)" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="col-sm-2 control-label">
+                                商品关键词（SEO）
+                            </label>
+                            <div class="col-sm-6">
+                                <input class="form-control" name="website_key"
+                                       value="{{ old('website_key')??$ret['website_key'] }}" id="key" placeholder="文章关键词(用于SEO)" type="text">
                             </div>
                         </div>
                         <div class="form-group">
@@ -142,6 +151,16 @@
                                 <input type="radio" name="is_index"
                                        {{ old('is_index') == 1 || isset($ret['is_nav']) && 1 == $ret['is_nav'] ? 'checked' : '' }}
                                        value="1"> 是
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc" class="col-sm-2 control-label">
+                                商品描述SEO
+                            </label>
+                            <div class="col-sm-6">
+                                <textarea id="" name="website_desc" rows="10" cols="80">
+                                     {{ old('website_desc')??$ret['website_desc'] }}
+                                </textarea>
                             </div>
                         </div>
                         <div class="form-group">

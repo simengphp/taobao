@@ -2,13 +2,13 @@
     <div class="header-bar">
         <i class="close"></i>
         <div class="wrapper">
-            <p class="coll-desc">按<strong>Ctrl&nbsp;+&nbsp;D</strong>,将517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网放入收藏夹，优惠券信息一手掌握！</p>
+            <p class="coll-desc">按<strong>Ctrl&nbsp;+&nbsp;D</strong>,将淘券网-淘宝天猫比价优惠券白菜秒杀特价红包返利网放入收藏夹，优惠券信息一手掌握！</p>
         </div>
     </div>
     <div class="header-top">
         <div class="wrapper">
-            <a href="http://tao.517zhe.com/" class="logo-area">
-                <img class="logo" alt="517折网-淘宝天猫比价优惠券白菜秒杀特价红包返利网" src="./static/431146a6721db3903acf99c29d94f9f3.png">
+            <a href="/" class="logo-area">
+                <img class="logo" alt="淘券网-淘宝天猫比价优惠券白菜秒杀特价红包返利网" src="/tao/pc/static/logo.png">
             </a>
             <div class="slogan-area">
                 <i class="slogan-icon cate-icon icon-haohuo"></i>
