@@ -29,6 +29,15 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">
+                                券结束时间
+                            </label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="end_time" name="end_time"
+                                       value="{{ old('end_time')??$ret['end_time'] }}" placeholder="券结束时间" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="old_price" class="col-sm-2 control-label">
                                 原价格<i style="color: red">*</i>
                             </label>
@@ -105,7 +114,7 @@
                             <div class="col-sm-6">
                                 <input name="pic" placeholder="封面图" type="file">
                                 <input type="hidden" value="{{ old('pic')??$ret['pic'] }}" name="pic" >
-                                <img src="/uploads/{{ old('pic')??$ret['pic'] }}" alt="" style="width:50px;height:auto">
+                                <img src="/uploads/{{ old('pic')??$ret['pic'] }}" alt="" style="width:200px;height:auto">
                             </div>
                         </div>
                         <div class="form-group">

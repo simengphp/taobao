@@ -6,7 +6,7 @@
  * Time: 13:53
  */
 
-namespace App\Model\Manager;
+namespace App\Model\Tao;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
@@ -16,10 +16,6 @@ class Article extends Base
     use SoftDeletes;
     protected $table = 'article';
     protected $model = null;
-    public $timestamps = true;
-    /**白名单字段*/
-    protected $fillable = ['pic', 'title', 'desc', 'look', 'sort', 'key','old_price','new_price','ticket',
-        'class_id','is_index','ticket_num','postcode','end_time'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -36,7 +32,7 @@ class Article extends Base
         parent::__construct($attributes);
     }
 
-    public function articleList($num, $data)
+    public function goodsList($num, $data)
     {
         if (isset($data['search_date']) && $data['search_date'] != '请选择日期') {
             $search_date = $this->getTime($data['search_date']);
@@ -59,31 +55,6 @@ class Article extends Base
             $list = Article::orderBy('created_at', 'desc')->orderBy('sort', 'asc')->paginate($num);
         }
         return $list;
-    }
-
-    public function curdArticle($data)
-    {
-        if (isset($data['id']) && $data['id'] > 0) {
-            $article = Article::find($data['id']);
-            $article->title = $data['title'];
-            $article->pic = $data['pic'];
-            $article->desc = $data['desc'];
-            $article->look = $data['look'];
-            $article->sort = $data['sort']??0;
-            $article->is_index = $data['is_index']??0;
-            $article->key = $data['key'];
-            $article->class_id = $data['class_id'];
-            $article->old_price = $data['old_price'];
-            $article->new_price = $data['new_price'];
-            $article->ticket = $data['ticket'];
-            $article->ticket_num = $data['ticket_num']??0;
-            $article->postcode = $data['postcode']??0;
-            $article->end_time = $data['end_time']??0;
-            $ret = $article->save();
-        } else {
-            $ret = Article::create($data);
-        }
-        return $ret;
     }
 
     public function getOneDetail($id)

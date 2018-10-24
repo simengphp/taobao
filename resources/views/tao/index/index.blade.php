@@ -99,61 +99,65 @@
 </div>
 <div class="wrapper home-wrapper">
     <div id="couponList" class="zk-list clearfix">
-
+        @foreach($goods_list as $k => $v)
         <div class="zk-item">
             <div class="img-area">
-
-                <span class="goods-new">新品</span>                    <div class="lq">
+                <span class="goods-new">新品</span>
+                <div class="lq">
                     <a href="http://tao.517zhe.com/index.php/index/click/index/id/566343208075/coupon_id/65675c8b51484b20b366d9c82919c459.html" target="_blank" rel="nofollow">
                         <div class="lq-t">
                             <p class="lq-t-d1">领优惠券</p>
-                            <p class="lq-t-d2">省<span>5</span>元</p>
+                            <p class="lq-t-d2">省<span>{{$v->ticket}}</span>元</p>
                         </div>
                         <div class="lq-b"></div>
                     </a>
                 </div>
 
                 <div class="bottom-info">
-                    <p class="time-count" data-endtime="1540223999"><i class="cate-icon"></i></p>
+                    <p class="time-count" data-endtime="{{$v->end_time}}"><i class="cate-icon"></i></p>
                 </div>
-                <a href="http://tao.517zhe.com/index.php/index/goods/index/id/566343208075.html" target="_blank" title="猫咪蹭痒器墙角蹭毛器猫咪按摩神器蹭脸猫抓板挠痒器玩具猫咪用品">
-                    <img alt="猫咪蹭痒器墙角蹭毛器猫咪按摩神器蹭脸猫抓板挠痒器玩具猫咪用品" data-original="https://img.alicdn.com/imgextra/i1/3822022360/TB2JcMUlXOWBuNjy0FiXXXFxVXa_!!3822022360.jpg_310x310.jpg" class="lazy" src="./static/TB2JcMUlXOWBuNjy0FiXXXFxVXa_3822022360.jpg" style="opacity: 1;">
+                <a href="" target="_blank" title="{{$v->title}}">
+                    <img alt="{{$v->title}}"
+                          class="lazy" src="/uploads/{{$v->pic}}" style="opacity: 1;">
                 </a>
             </div>
             <p class="title-area elli">
-
                 <span class="post-free">
-                    包邮
+                    {{$v->postcode?'包邮':'不包邮'}}
                 </span>
-
-                猫咪蹭痒器墙角蹭毛器猫咪按摩神器蹭脸猫抓板挠痒器玩具猫咪用品            </p>
-            <div class="raw-price-area">现价：¥18<p class="sold">已领 239 张券</p></div>
+                {{$v->title}}
+            </p>
+            <div class="raw-price-area">原价：¥{{$v->old_price}}<p class="sold">已领 {{$v->ticket_num}} 张券</p></div>
             <div class="info">
                 <div class="price-area">
                     <span class="price">
-                        ¥
-                        <em class="number-font" style="font-size: 26px;">
-                            13                        </em>
-                        <i>
-                        </i>
+                        现价：¥
+                        <em class="number-font" style="font-size: 18px;">
+                            {{$v->new_price}}
+                        </em>
+                        <i></i>
                     </span>
                 </div>
                 <div class="buy-area">
-                    <a href="http://tao.517zhe.com/index.php/index/click/index/id/566343208075/coupon_id/65675c8b51484b20b366d9c82919c459.html" target="_blank" rel="nofollow">
-                                            <span class="coupon-amount">
-                                                            去淘宝
-                                                    </span>
+                    <a href="" target="_blank" rel="nofollow">
+                        <span class="coupon-amount">
+                                        去淘宝
+                        </span>
                         <span class="btn-title">火速领券</span>
                     </a>
                 </div>
                 <div class="platform-area">
-                    <img src="./static/platform_taobao.png">淘宝
+                    <img src="{{ asset('./tao/pc/static/platform_taobao.png') }}">淘宝
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
     <div class="page">
-        <ul class="pagination"><li class="disabled"><span>«</span></li> <li class="active"><span>1</span></li><li><a href="http://tao.517zhe.com/?page=2">2</a></li><li><a href="http://tao.517zhe.com/?page=3">3</a></li><li><a href="http://tao.517zhe.com/?page=4">4</a></li><li><a href="http://tao.517zhe.com/?page=5">5</a></li><li><a href="http://tao.517zhe.com/?page=6">6</a></li><li><a href="http://tao.517zhe.com/?page=7">7</a></li><li><a href="http://tao.517zhe.com/?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="http://tao.517zhe.com/?page=1004">1004</a></li><li><a href="http://tao.517zhe.com/?page=1005">1005</a></li> <li><a href="http://tao.517zhe.com/?page=2">»</a></li></ul>    </div>
+        <ul class="pagination">
+            {{$goods_list->links()}}
+        </ul>
+    </div>
 </div>
 @include('tao.common.footer')
 <script type="text/javascript">
