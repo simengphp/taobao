@@ -14,7 +14,7 @@ class Friend extends Base
 
     public function friendList()
     {
-        $list = Friend::orderBy('sort','asc')->get();
+        $list = Friend::orderBy('sort','asc')->where('deleted_at',null)->get();
         return $list;
     }
 }

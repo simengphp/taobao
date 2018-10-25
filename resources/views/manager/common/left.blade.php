@@ -75,7 +75,7 @@
                     <li><a href="/pic/picList"><i class="fa fa-circle-o"></i>网站图片</a></li>
                 </ul>
             </li>
-            <li class="treeview pic">
+            <li class="treeview nav">
                 <a href="#">
                     <i class="fa fa-bars"></i>
                     <span>导航栏管理</span>
