@@ -8,6 +8,7 @@
 
 namespace App\Providers;
 
+use App\Model\Manager\Config;
 use App\Model\Tao\ClassName;
 use App\Model\Tao\Friend;
 use App\Model\Tao\Nav;
@@ -26,9 +27,10 @@ class TaoServiceProvider extends AppServiceProvider
         $friend_link = (new Friend())->friendList();
 
 
-        $website_title = "淘券网,一个帮你省钱的购物网站";
-        $website_key = "返利,优惠券,淘宝优惠券,消费返利网,京东优惠券";
-        $website_desc = "淘券网,一个帮你省钱的购物网站,提供天猫，淘宝等购物网站的优惠券，让你花更少的钱买更多的东西";
+        $config = (new Config())->getOneDetail(1);
+        $website_title = $config['title']??"淘券网,一个帮你省钱的购物网站";
+        $website_key = $config['keys']??"返利,优惠券,淘宝优惠券,消费返利网,京东优惠券";
+        $website_desc = $config['description']??"淘券网,一个帮你省钱的购物网站,提供天猫，淘宝等购物网站的优惠券，让你花更少的钱买更多的东西";
 
 
         View::share("website_title", $website_key);
