@@ -30,6 +30,15 @@
                         </div>
                         <div class="form-group">
                             <label for="title" class="col-sm-2 control-label">
+                                商品链接
+                            </label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="url" name="url"
+                                       value="{{ old('url')??$ret['url'] }}" placeholder="商品链接" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">
                                 券结束时间
                             </label>
                             <div class="col-sm-6">

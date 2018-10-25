@@ -19,7 +19,7 @@ class Article extends Base
     public $timestamps = true;
     /**白名单字段*/
     protected $fillable = ['pic', 'title', 'desc', 'look', 'sort', 'key','old_price','new_price','ticket',
-        'class_id','is_index','ticket_num','postcode','end_time','website_key','website_desc'];
+        'class_id','is_index','ticket_num','postcode','end_time','website_key','website_desc','url'];
     public function fromDateTime($value)
     {
         return empty($value)?$value:$this->getTimeFormat();
@@ -76,6 +76,7 @@ class Article extends Base
             $article->old_price = $data['old_price'];
             $article->new_price = $data['new_price'];
             $article->ticket = $data['ticket'];
+            $article->url = $data['url'];
             $article->website_key = $data['website_key'];
             $article->website_desc = $data['website_desc'];
             $article->ticket_num = $data['ticket_num']??0;
