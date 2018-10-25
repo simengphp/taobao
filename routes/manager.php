@@ -8,6 +8,8 @@
 Route::group(['middleware'=>'manager'], function () {
 
     Route::any('/common/ajaxEditField', 'Manager\BaseController@ajaxEditField');
+    Route::any('/common/delFieldBase', 'Manager\BaseController@delFieldBase');
+
 
     Route::any('/manager/login', 'Manager\ManagerController@login');
     Route::any('/main/index', 'Manager\IndexController@index');
