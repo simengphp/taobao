@@ -48,8 +48,8 @@
             <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1320px, 0px, 0px);">
                 @foreach($pic_list as $k=>$v)
                     <div class="swiper-slide swiper-slide-prev" style="width: 660px;">
-                        <a target="_blank" class="swiper-slide swiper-slide-duplicate" href="" style="width: 660px;">
-                            <img style="width: 100%;" src="./uploads/{{$v->pic}}">
+                        <a target="_blank" class="swiper-slide swiper-slide-duplicate" href="{{$v->url}}" style="width: 660px;">
+                            <img style="width: 100%;" src="./uploads/{{$v->pic}}" alt="{{$v->alt}}">
                         </a>
                     </div>
                 @endforeach
@@ -61,8 +61,8 @@
         </div>
 
         <div class="top-right-banner">
-            <a href="http://tao.517zhe.com/index.php/index/index/index.html" target="_blank" title="轮播右侧">
-                <img src="./uploads/{{$pic_right->pic}}" title="轮播右侧广告">
+            <a href="{{$pic_right->url}}" target="_blank" title="{{$pic_right->alt}}">
+                <img src="./uploads/{{$pic_right->pic}}" title="{{$pic_right->alt}}">
             </a>
         </div>
 
@@ -71,7 +71,7 @@
     <div class="small-banner-area">
         @foreach($pic_bottom_list as $k=>$v)
         <div href="javascript:;" class="small-banner-item">
-            <a target="_blank" href="http://tao.517zhe.com/index.php/index/index/index.html">
+            <a target="_blank" href="{{$v->url}}">
                 <img src="./uploads/{{$v->pic}}">
                 <p class="title">{{$v->alt}}</p>
             </a>
