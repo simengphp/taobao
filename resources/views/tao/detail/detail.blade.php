@@ -53,7 +53,7 @@
                     </p>
                     <div class="buy-area">
                         <p class="desc">有效期内领券下单，享受立减优惠！</p>
-                        <a href="http://tao.517zhe.com/index.php/index/click/index/id/560506633266/coupon_id/e1e08b45fde6429a88e7bd140723efee.html" target="_blank" rel="nofollow" class="buy-btn">
+                        <a href="{{$goods_detail->url}}" target="_blank" rel="nofollow" class="buy-btn">
                             <div class="line line-l"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                             <div class="line line-r"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                             领券立减<em>{{$goods_detail->ticket}}</em>元
