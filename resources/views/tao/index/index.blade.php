@@ -86,7 +86,7 @@
             <div class="img-area">
                 <span class="goods-new">新品</span>
                 <div class="lq">
-                    <a href="#" target="_blank" rel="nofollow">
+                    <a href="{{$v->url}}" target="_blank" rel="nofollow">
                         <div class="lq-t">
                             <p class="lq-t-d1">领优惠券</p>
                             <p class="lq-t-d2">省<span>{{$v->ticket}}</span>元</p>
@@ -121,7 +121,7 @@
                     </span>
                 </div>
                 <div class="buy-area">
-                    <a href="" target="_blank" rel="nofollow">
+                    <a href="{{$v->url}}" target="_blank" rel="nofollow">
                         <span class="coupon-amount">
                                         去淘宝
                         </span>
