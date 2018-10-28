@@ -14,9 +14,9 @@ class Pic extends Base
 {
     protected $table = 'pic';
 
-    public function picList($class_id)
+    public function picList($class_id, $num = 10)
     {
-        $list = DB::table('pic')->orderBy('sort','asc')->where('deleted_at', null)->where('class_id', $class_id)->get();
+        $list = DB::table('pic')->orderBy('sort','asc')->where('deleted_at', null)->where('class_id', $class_id)->limit($num)->get();
         return $list;
     }
 
