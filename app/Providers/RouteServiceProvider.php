@@ -84,7 +84,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapTaoRoutes()
     {
-        Route::namespace($this->namespace)
+        Route::middleware('tao')
+        ->namespace($this->namespace)
             ->group(base_path('routes/tao.php'));
     }
 
