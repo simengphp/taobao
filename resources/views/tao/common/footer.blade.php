@@ -26,7 +26,7 @@
     </div>
     <div class="footer-bootom">
         <div class="wrapper">
-            <p>淘券网-淘宝天猫比价优惠券白菜秒杀特价红包返利网  <a href="http://www.miitbeian.gov.cn/" target="_blank"></a>　　Copyright @2016-{{ date('Y') }} 淘券网 tao.simengphp.cn  All Rights Reserved</p>
+            <p>淘券网-淘宝天猫比价优惠券白菜秒杀特价红包返利网  <a href="http://tao.simengphp.cn/" target="_blank"></a>　　Copyright @2016-{{ date('Y') }} 淘券网 tao.simengphp.cn  All Rights Reserved</p>
         </div>
     </div>
 </div>
