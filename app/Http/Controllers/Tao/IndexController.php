@@ -15,6 +15,9 @@ class IndexController extends BaseController
 {
     public function index()
     {
+        if ($this->isMobile()) {
+            return redirect('/mobile/index');
+        }
         $pic_list = (new Pic())->picList(1);
         $pic_right = (new Pic())->onePic(2);
         //dd($pic_list);
@@ -25,4 +28,6 @@ class IndexController extends BaseController
             'pic_right'=>$pic_right,'pic_bottom_list'=>$pic_bottom_list,
         'goods_list'=>$goods_list]);
     }
+
+
 }

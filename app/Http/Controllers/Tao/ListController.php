@@ -23,6 +23,9 @@ class ListController extends BaseController
 
     public function goodsList(Request $request)
     {
+        if ($this->isMobile()) {
+            return redirect('/mobile/goods');
+        }
         /**获取商品*/
         $goods_list = $this->model->goodsList(16,$request->all());
         return view('tao.list.list', ['goods_list'=>$goods_list]);
@@ -30,6 +33,9 @@ class ListController extends BaseController
 
     public function goodsDetail(Request $request)
     {
+        if ($this->isMobile()) {
+            return redirect('/mobile/detail');
+        }
         /**获取商品*/
         $goods_detail = $this->model->getOneDetail($request->g_id);
         $goods_detail['key'] = explode('|', $goods_detail['key']);
