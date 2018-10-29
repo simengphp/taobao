@@ -2,9 +2,9 @@
 <section class="cxx-goods">
     <ul class="cxx-goods-list">
         @foreach($goods_list as $k=>$v)
-            <li class="am-margin-top cxx-prize" data-url="/index.php/m/goods/index/id/564586794159.html">
+            <li class="am-margin-top cxx-prize" data-url="/mobile/detail?g_id={{$v->id}}">
                 <div class="cxx-goods-box am-padding-xs"><div class="am-inline-block">
-                        <a href="http://tao.517zhe.com/index.php/m/goods/index/id/564586794159.html">
+                        <a href="/mobile/detail?g_id={{$v->id}}">
                             <img src="/uploads/{{$v->pic}}" class="cxx-image lazy">
                         </a>
                     </div>
