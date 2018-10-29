@@ -25,7 +25,7 @@ class ListController extends BaseController
     {
         /**获取商品*/
         $goods_list = $this->model->goodsList(16,$request->all());
-        return view('tao.list.list', ['goods_list'=>$goods_list]);
+        return view('mobile.list.list', ['goods_list'=>$goods_list]);
     }
 
     public function goodsDetail(Request $request)
@@ -42,7 +42,7 @@ class ListController extends BaseController
         $website_title = $goods_detail['title'];
         $website_key = $goods_detail['website_key'];
         $website_desc = $goods_detail['website_desc'];
-        return view('tao.detail.detail', ['goods_list'=>$goods_list,'goods_detail'=>$goods_detail,'website_title'=>$website_title,
+        return view('mobile.detail.detail', ['goods_list'=>$goods_list,'goods_detail'=>$goods_detail,'website_title'=>$website_title,
             'website_desc'=>$website_desc,'website_key'=>$website_key]);
     }
 }
